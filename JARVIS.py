@@ -136,7 +136,7 @@ def activateAssistant():
 
 
 def startAssistant():
-    wishme()
+    
     activate = activateAssistant()
     print(activate)
     if activate==1:      
