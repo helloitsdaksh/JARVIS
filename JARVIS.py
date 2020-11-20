@@ -94,7 +94,7 @@ def takeCommand():
     res = sr.Recognizer()
     with sr.Microphone() as source:
         print("speak Now...")
-        res.pause_threshold = 1
+        res.pause_threshold = 0.8
         audio = res.listen(source)
 
     try:
@@ -108,10 +108,10 @@ def takeCommand():
         return "None"
     return query
 
-def helloHarvey():
+def helloJarvis():
     res = sr.Recognizer()
-    with sr.Microphone() as source:
-        print("speak Now...")
+    print("speak Now...")
+    with sr.Microphone() as source:       
         res.pause_threshold = 1
         audio = res.listen(source)
 
@@ -127,8 +127,8 @@ def helloHarvey():
 
 def activateAssistant():
     query=""
-    query = helloHarvey().lower()
-    if query == "hey jarvis":  
+    query = helloJarvis().lower()
+    if query == "ok jarvis":  
         flag = 1
     else:
         flag = 0
@@ -155,15 +155,15 @@ def startAssistant():
                 print(results)
                 speak(results)
 
-            elif "open youtube " in query:
-                webbrowser.open("youtube.com")
+            elif "open youtube" in query:
+                webbrowser.get('windows-default').open('www.youtube.com')
 
             elif "open spotify" in query:
                 CodePath = "C:\\Users\\hello\\AppData\\Roaming\\Spotify\\Spotify.exe"
                 os.startfile(CodePath)
 
             elif 'open google' in query:
-                webbrowser.open("google.com")
+                webbrowser.get('windows-default').open('http://www.google.com')
 
             elif "open vs code" in query:
                 CodePath = "c:\\user\\hello\\appdata\\local\\programs\\microsoft vs code\\code.exe"
@@ -177,7 +177,14 @@ def startAssistant():
                 location()
 
             elif "open udemy" in query:
-                webbrowser.open("https://www.udemy.com/course/machinelearning/learn/lecture/6760378#overview")
+                webbrowser.get('windows-default').open("https://www.udemy.com/course/machinelearning/learn/lecture/6760378#overview")
+
+            elif "open gmail" in query:
+                webbrowser.get('windows-default').open('http://www.gmail.com')
+            
+            elif "open google drive" in query:
+                webbrowser.get('windows-default').open('https://drive.google.com/drive/u/0/my-drive')
+                
             elif "ok bye" in query:
                 startAssistant()
 
