@@ -166,7 +166,7 @@ def startAssistant():
                 webbrowser.get('windows-default').open('http://www.google.com')
 
             elif "open vs code" in query:
-                CodePath = "c:\\user\\hello\\appdata\\local\\programs\\microsoft vs code\\code.exe"
+                CodePath = "C:\\Users\\hello\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
                 os.startfile(CodePath)
 
             elif "open illustrator" in query:

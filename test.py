@@ -1,3 +1,4 @@
-import webbrowser   
-webbrowser.get('windows-default').open('http://www.youtube.com')
+import os
 
+CodePath = "C:\\Users\\hello\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+os.startfile(CodePath)
