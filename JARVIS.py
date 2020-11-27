@@ -44,7 +44,7 @@ def weather(lat,lng):
     code reference from gfg
     '''
 
-    api_key = "aa9bd4341bb147f4265f73c509b69226"
+    api_key = "API - KEY"
   
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
   
